@@ -131,3 +131,10 @@ class FeedPost extends StatelessWidget {
     );
   }
 }
+
+
+//dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.0.0
+
