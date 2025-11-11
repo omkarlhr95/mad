@@ -82,3 +82,11 @@ class SuccessScreen extends StatelessWidget {
     );
   }
 }
+
+
+//dependencies:
+  //lottie: ^2.6.0
+  //google_fonts: ^6.0.0
+
+// assets:
+ //   - assets/success-icon.json
