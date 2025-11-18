@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_menu_item/assignments/food_menu.dart';
+
+import 'FoodMenu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,14 +9,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(home: const FoodMenuItem());
-  }
+  }
 }
 
 ......................................
-food_menu.dart 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -34,10 +35,7 @@ class FoodMenuItem extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(16),
             boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.1),
-                blurRadius: 6,
-              ),
+              BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 6),
             ],
           ),
           child: Column(
@@ -87,7 +85,37 @@ class FoodMenuItem extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
+      ),
+    );
+  }
 }
+
+
+------------------------------------------------------------------
+Dependency 
+----------------------------
+
+name: test2
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  image_picker: ^1.1.2
+  google_fonts: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/pizza.jpeg
+
