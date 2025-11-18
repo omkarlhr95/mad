@@ -1,0 +1,93 @@
+import 'package:flutter/material.dart';
+import 'package:food_menu_item/assignments/food_menu.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(home: const FoodMenuItem());
+  }
+}
+
+......................................
+food_menu.dart 
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class FoodMenuItem extends StatelessWidget {
+  const FoodMenuItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFFFF5EC),
+      body: Center(
+        child: Container(
+          width: 300,
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 6,
+              ),
+            ],
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                height: 120,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.orangeAccent,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Center(
+                  child: Image.network(
+                    'https://cdn-icons-png.flaticon.com/512/1404/1404945.png',
+                    height: 60,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
+              Text(
+                'Margherita Pizza',
+                style: GoogleFonts.playfairDisplay(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Fresh tomatoes, mozzarella cheese, basil leaves on crispy thin crust',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.lato(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 14,
+                ),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                '\$12.99',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.deepOrange,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
